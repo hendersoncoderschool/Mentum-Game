@@ -9,33 +9,37 @@ public class CameraTargetController : MonoBehaviour
     private Vector3 dragOrgin;
     private bool userControl = false;
     private float startTime;
+    public bool cutscene = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(2))
+        if (cutscene == false)
         {
-            dragOrgin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            userControl = true;
-            startTime = Time.time;
-        }
-        if (Input.GetMouseButtonUp(2))
-        {
-            if (Time.time - startTime < 0.2f)
+            if (Input.GetMouseButtonDown(2))
             {
-                userControl = false;
+                dragOrgin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                userControl = true;
+                startTime = Time.time;
             }
-        }
-        if (userControl)
-        {
-            DragCamera();
-        }
-        else
-        {
-            //Snap back to player
-            Vector3 newPos = Vector3.Lerp(transform.position, player.position, Time.deltaTime * 5f);
-            newPos.z = transform.position.z;
-            transform.position = newPos;
+            if (Input.GetMouseButtonUp(2))
+            {
+                if (Time.time - startTime < 0.2f)
+                {
+                    userControl = false;
+                }
+            }
+            if (userControl)
+            {
+                DragCamera();
+            }
+            else
+            {
+                //Snap back to player
+                Vector3 newPos = Vector3.Lerp(transform.position, player.position, Time.deltaTime * 5f);
+                newPos.z = transform.position.z;
+                transform.position = newPos;
+            }
         }
     }
 
