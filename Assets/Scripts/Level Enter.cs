@@ -1,21 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class LevelEnter : MonoBehaviour
 {
     public CameraTargetController Camera;
+    public GameObject Fade;
     public float LevelNum;
+    private int Transitioning = 0;
     // Start is called before the first frame update
     void Start()
     {
-
+        Fade = GameObject.FindWithTag("Fade");
+        //Need to get script
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        GameObject Player = GameObject.FindWithTag("Player");
+        if (Transitioning == 1)
+        {
+            Player.transform.position += Vector3.up * Time.deltaTime * 40f;
+            Player.transform.Rotate(1080*Time.deltaTime, 0 , 0);
+        }
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -36,6 +46,7 @@ public class LevelEnter : MonoBehaviour
 
     IEnumerator LevelTransition()
     {
+        Fade.fade = true;
         Debug.Log("Starting Coroutine)");
         GameObject Player = GameObject.FindWithTag("Player");
         Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
@@ -47,6 +58,6 @@ public class LevelEnter : MonoBehaviour
         }
         Camera.cutscene = true;
         Player.transform.rotation = Quaternion.Euler(90, 0, 0);
-        //new Vector2 Player.tranform.rotation.y = 0;
+        Transitioning = 1;
     }
 }

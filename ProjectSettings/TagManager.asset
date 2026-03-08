@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioManager
   - Bomb
+  - Fade
   layers:
   - Default
   - TransparentFX
