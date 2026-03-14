@@ -6,20 +6,24 @@ using UnityEngine.Rendering;
 public class FadeTransition : MonoBehaviour
 {
     GameObject Player;
-    bool fade = false;
+    public bool fade = false;
+    private float fadeamount = 0;
+    RectTransform rectTransform;
 
     // Start is called before the first frame update
     void Start()
     {
+        rectTransform = GetComponent<RectTransform>();
         Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Player.transitioning == true)
+        if (fade == true)
         {
-
+            fadeamount += Time.deltaTime * 10 * (1 + (fadeamount * 0.3f));
+            rectTransform.localScale = new Vector3(24.688f, fadeamount, 1);
         }
     }
 }

@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 288754457}
+  Fade: {fileID: 1836173987}
   LevelNum: 0
 --- !u!61 &210539025
 BoxCollider2D:
@@ -2565,6 +2566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db87783bf9a10fa4c866d2b72a2ceed4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fade: 0
 --- !u!1 &1872895130
 GameObject:
   m_ObjectHideFlags: 0

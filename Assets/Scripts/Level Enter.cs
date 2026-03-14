@@ -7,13 +7,13 @@ using UnityEngine.UIElements;
 public class LevelEnter : MonoBehaviour
 {
     public CameraTargetController Camera;
-    public GameObject Fade;
+    public FadeTransition Fade;
     public float LevelNum;
     private int Transitioning = 0;
     // Start is called before the first frame update
     void Start()
     {
-        Fade = GameObject.FindWithTag("Fade");
+        Fade = GameObject.FindWithTag("Fade").GetComponent<FadeTransition>();
         //Need to get script
     }
 
