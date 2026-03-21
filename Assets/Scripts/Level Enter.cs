@@ -10,10 +10,12 @@ public class LevelEnter : MonoBehaviour
     public FadeTransition Fade;
     public float LevelNum;
     private int Transitioning = 0;
+    public ParticleSystem particles;
     // Start is called before the first frame update
     void Start()
     {
         Fade = GameObject.FindWithTag("Fade").GetComponent<FadeTransition>();
+        particles.Stop();
         //Need to get script
     }
 
@@ -46,6 +48,7 @@ public class LevelEnter : MonoBehaviour
 
     IEnumerator LevelTransition()
     {
+        particles.Play();
         Fade.fade = true;
         Debug.Log("Starting Coroutine)");
         GameObject Player = GameObject.FindWithTag("Player");
