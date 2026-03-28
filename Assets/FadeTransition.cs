@@ -12,6 +12,7 @@ public class FadeTransition : MonoBehaviour
     public string LoadLevel;
     private float fadeamount = 24;
     RectTransform rectTransform;
+    public AudioSource Music;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class FadeTransition : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         Player = GameObject.FindWithTag("Player");
         fadeamount = 24;
+        Music.volume = 0f;
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class FadeTransition : MonoBehaviour
             if (fadeamount < 24)
             {
                 fadeamount += Time.deltaTime * 10 * (1 + (fadeamount * 0.3f));
+                Music.volume -= Time.deltaTime;
             }
             else
             {
@@ -45,6 +48,7 @@ public class FadeTransition : MonoBehaviour
             if (fadeamount > 0)
             {
             fadeamount -= Time.deltaTime * 10 * (1 + (fadeamount * 0.3f));
+            Music.volume += Time.deltaTime;
             }
             else
             {
