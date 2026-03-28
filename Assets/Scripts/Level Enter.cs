@@ -8,7 +8,7 @@ public class LevelEnter : MonoBehaviour
 {
     public CameraTargetController Camera;
     public FadeTransition Fade;
-    public float LevelNum;
+    public string LevelGoTo;
     private int Transitioning = 0;
     public ParticleSystem particles;
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class LevelEnter : MonoBehaviour
         {
             Player.transform.position += Vector3.up * Time.deltaTime * 40f;
             Player.transform.Rotate(1080*Time.deltaTime, 0 , 0);
+            print("working now");
         }
     }
     void OnCollisionEnter2D(Collision2D col)
@@ -50,6 +51,7 @@ public class LevelEnter : MonoBehaviour
     {
         particles.Play();
         Fade.fade = true;
+        Fade.LoadLevel = LevelGoTo;
         Debug.Log("Starting Coroutine)");
         GameObject Player = GameObject.FindWithTag("Player");
         Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;

@@ -9,6 +9,7 @@ public class FadeTransition : MonoBehaviour
 {
     GameObject Player;
     public bool fade = false;
+    public string LoadLevel;
     private float fadeamount = 24;
     RectTransform rectTransform;
 
@@ -36,7 +37,7 @@ public class FadeTransition : MonoBehaviour
 
             if (fadeamount > 24)
             {
-                SceneManager.LoadScene("Testing Grounds");
+                SceneManager.LoadScene(LoadLevel);
             }
         }
         else
