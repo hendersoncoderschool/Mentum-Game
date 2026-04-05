@@ -2786,10 +2786,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1716775936703162441, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: fade
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1716775936703162441, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: Music
       value: 
       objectReference: {fileID: 519420037}
