@@ -967,6 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1519680689}
   cutscene: 0
+  PauseScript: {fileID: 375373334}
 --- !u!4 &288754458
 Transform:
   m_ObjectHideFlags: 0
@@ -1560,7 +1561,7 @@ GameObject:
   - component: {fileID: 375373332}
   - component: {fileID: 375373334}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,6 +1639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Paused: 0
   TimeScale: 1
+  Squish: 0
 --- !u!1001 &380801509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6213,6 +6215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rCamera: {fileID: 519420031}
+  PauseScript: {fileID: 375373334}
 --- !u!1 &1688600720
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class CameraControl : MonoBehaviour
     private bool Lock = false;
     private float startTime;
     private Vector3 dragOrgin;
+    public PauseMenu PauseScript;
 
     // Start is called before the first frame update
     void Start()
@@ -26,58 +27,61 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Lock == false)
+        if (PauseScript.Paused == false)
         {
-            TopVel -= 0.01f;
-            if (TopVel <= Player.velocity.magnitude)
+            if (Lock == false)
             {
-                TopVel = (TopVel * 0.99f + Player.velocity.magnitude * 0.01f);
-            }
-
-            Zoom *= 0.999f;
-
-        }
-
-        Zoom = Zoom + Input.GetAxis("Mouse ScrollWheel") * -5;
-
-        if (Input.GetMouseButton(2))
-        {
-            if (Input.GetMouseButtonDown(2))
-            {
-                
-                if (Lock == false)
+                TopVel -= 0.01f;
+                if (TopVel <= Player.velocity.magnitude)
                 {
-                    Zoom = Zoom + TopVel * 0.25f;
-                    TopVel = 0;
+                    TopVel = (TopVel * 0.99f + Player.velocity.magnitude * 0.01f);
                 }
 
-                startTime = Time.time;
-                Lock = true;   
+                Zoom *= 0.999f;
+
             }
 
-        }
+            Zoom = Zoom + Input.GetAxis("Mouse ScrollWheel") * -5;
 
-        if (Input.GetMouseButtonUp(2))
-        {
-            if (Time.time - startTime < 0.2f)
+            if (Input.GetMouseButton(2))
             {
+                if (Input.GetMouseButtonDown(2))
+                {
+
+                    if (Lock == false)
+                    {
+                        Zoom = Zoom + TopVel * 0.25f;
+                        TopVel = 0;
+                    }
+
+                    startTime = Time.time;
+                    Lock = true;
+                }
+
+            }
+
+            if (Input.GetMouseButtonUp(2))
+            {
+                if (Time.time - startTime < 0.2f)
+                {
+                    StartCoroutine(SmoothZoom());
+                }
+            }
+
+            if (Zoom < TopVel * -0.25f)
+            {
+                Zoom = TopVel * -0.25f;
+            }
+
+            if (Input.GetKeyDown("r") && Lock == false)
+            {
+                Zoom = Zoom + TopVel * 0.25f;
+                TopVel = 0;
                 StartCoroutine(SmoothZoom());
             }
-        }
-
-        if (Zoom < TopVel * -0.25f)
-        {
-            Zoom = TopVel * -0.25f;
-        }
-
-        if (Input.GetKeyDown("r") && Lock == false)
-        {
-            Zoom = Zoom + TopVel * 0.25f;
-            TopVel = 0;
-            StartCoroutine(SmoothZoom());
-        }
 
             vCamera.m_Lens.OrthographicSize = (6 + Zoom + TopVel / 4);
+        }
             
     }
 

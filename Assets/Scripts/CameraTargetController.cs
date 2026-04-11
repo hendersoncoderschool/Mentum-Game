@@ -10,11 +10,12 @@ public class CameraTargetController : MonoBehaviour
     private bool userControl = false;
     private float startTime;
     public bool cutscene = false;
+    public PauseMenu PauseScript;
 
     // Update is called once per frame
     void Update()
     {
-        if (cutscene == false)
+        if (cutscene == false && PauseScript.Paused == false)
         {
             if (Input.GetMouseButtonDown(2))
             {
@@ -51,7 +52,10 @@ public class CameraTargetController : MonoBehaviour
         difference.z = 0;
         if (Input.GetMouseButton(2))
         {
-            transform.position += difference;
+            if (PauseScript.Paused == false)
+            {
+                transform.position += difference;
+            }
         }
         dragOrgin = currentPos;
     }
