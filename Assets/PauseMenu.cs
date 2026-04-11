@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public bool Paused = false;
     public float TimeScale = 1f;
     public float Squish = 0f;
+    public AudioMixer audioMixer;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +54,6 @@ public class PauseMenu : MonoBehaviour
             }
         }
         rectTransform.localScale = new Vector3(Squish, 1, 1);
+        audioMixer.SetFloat("MyExposedParam", 1 - Squish);
     }
 }
