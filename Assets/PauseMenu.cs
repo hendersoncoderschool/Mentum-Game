@@ -56,4 +56,31 @@ public class PauseMenu : MonoBehaviour
         rectTransform.localScale = new Vector3(Squish, 1, 1);
         audioMixer.SetFloat("MyExposedParam", 1 - Squish);
     }
+
+    public void Resume()
+    {
+        Paused = false;
+    }
+    public void Options()
+    {
+
+    }
+    public void ReturnToCheckpoint()
+    {
+
+    }
+    public void RestartLevel()
+    {
+
+    }
+    public void ReturnToHUB()
+    {
+
+    }
+    public void MainMenu()
+    {
+
+    }
+
+
 }
