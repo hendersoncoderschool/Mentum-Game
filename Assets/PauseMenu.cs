@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,10 +12,12 @@ public class PauseMenu : MonoBehaviour
     public float TimeScale = 1f;
     public float Squish = 0f;
     public AudioMixer audioMixer;
+    public PlayerInput Player;
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
+        Player = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -67,11 +71,12 @@ public class PauseMenu : MonoBehaviour
     }
     public void ReturnToCheckpoint()
     {
-
+        Player.ReturnToCheckpoint();
+        Paused = false;
     }
     public void RestartLevel()
     {
-
+        SceneManager.LoadScene("Testing Grounds");
     }
     public void ReturnToHUB()
     {

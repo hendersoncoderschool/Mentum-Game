@@ -4612,6 +4612,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1707367237400797346, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1519680690}
     - target: {fileID: 1716775936703162441, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: Music
       value: 

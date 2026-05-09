@@ -227,9 +227,7 @@ public class PlayerInput : MonoBehaviour
         }
         if (Input.GetKeyDown("r") && CanControl)
         {
-            transform.position = SpawnPoint;
-            RB.velocity = Vector3.zero;
-            RB.angularVelocity = 0;
+            ReturnToCheckpoint();
         }
     }
         IEnumerator PauseGravity()
@@ -244,6 +242,13 @@ public class PlayerInput : MonoBehaviour
     public bool isColliding(Vector2 collisionPoint)
     {
         return Physics2D.Raycast(transform.position, collisionPoint, 1f, RaycastDetection);
+    }
+
+    public void ReturnToCheckpoint()
+    {
+        transform.position = SpawnPoint;
+        RB.velocity = Vector3.zero;
+        RB.angularVelocity = 0;
     }
 
 

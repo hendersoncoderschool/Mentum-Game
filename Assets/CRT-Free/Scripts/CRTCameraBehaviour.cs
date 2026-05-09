@@ -75,11 +75,14 @@ namespace BrewedInk.CRT
 
 		void DestroyMaterial()
 		{
+			//Commented out because it's stupid and causes errors
+			/*
 			if (_runtimeMaterial != null)
 			{
 				DestroyImmediate(_runtimeMaterial);
 				_runtimeMaterial = null;
 			}
+			*/
 		}
 
 		void CreateMaterial()
