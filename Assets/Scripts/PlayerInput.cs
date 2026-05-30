@@ -25,6 +25,8 @@ public class PlayerInput : MonoBehaviour
     private Vector3 SpawnPoint;
     private int CheckpointNum = 0;
     public bool CanControl = true;
+    public AudioClip sfx_explosion;
+    AudioSource audioSource;
 
 
 
@@ -33,6 +35,7 @@ public class PlayerInput : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         //mouseWorldPos.z = -10f;
     }
 
@@ -216,6 +219,8 @@ public class PlayerInput : MonoBehaviour
                     GameObject newExplosion = Instantiate(Explosion, Bomb.transform.position, Bomb.transform.rotation);
                     Destroy(Bomb.gameObject);
                     Destroy(newExplosion, 0.7f);
+                    audioSource.PlayOneShot(sfx_explosion, 1);
+
 
                 }
             }
