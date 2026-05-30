@@ -17,13 +17,15 @@ public class PlayerInput : MonoBehaviour
     private float MaxCooldown = 0.4f;
     public bool Grounded = false;
     public GameObject Bomb;
+    public GameObject Explosion;
     public float Charge = 0;
     public float MaxCharge;
-    public LayerMask RaycastDetection;
     public float Strength = 10;
+    public LayerMask RaycastDetection;
     private Vector3 SpawnPoint;
     private int CheckpointNum = 0;
     public bool CanControl = true;
+
 
 
     // Start is called before the first frame update
@@ -211,8 +213,10 @@ public class PlayerInput : MonoBehaviour
                     }
 
 
-
+                    GameObject newExplosion = Instantiate(Explosion, Bomb.transform.position, Bomb.transform.rotation);
                     Destroy(Bomb.gameObject);
+                    Destroy(newExplosion, 0.7f);
+
                 }
             }
             if (numColliders > 0)

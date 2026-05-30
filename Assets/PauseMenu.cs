@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public float Squish = 0f;
     public AudioMixer audioMixer;
     public PlayerInput Player;
+    public string OptionMenu = "Main";
     // Start is called before the first frame update
     void Start()
     {
@@ -76,11 +77,11 @@ public class PauseMenu : MonoBehaviour
     }
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Testing Grounds");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void ReturnToHUB()
     {
-
+        SceneManager.LoadScene("HUB");
     }
     public void MainMenu()
     {
