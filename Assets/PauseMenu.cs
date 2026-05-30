@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
 {
     RectTransform rectTransform;
     public bool Paused = false;
+    [SerializeField] public GameObject Pause;
+    [SerializeField] public GameObject Option;
     public float TimeScale = 1f;
     public float Squish = 0f;
     public AudioMixer audioMixer;
@@ -27,6 +29,11 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Paused = !Paused;
+            if (Paused == true)
+            {
+                Pause.SetActive(true);
+                Option.SetActive(false);
+            }
         }
         if (Paused == true)
         {
@@ -40,7 +47,7 @@ public class PauseMenu : MonoBehaviour
                     {
                         Squish = 1;
                     }
-                }
+                }   
             }
         }
         else
@@ -68,6 +75,9 @@ public class PauseMenu : MonoBehaviour
     }
     public void Options()
     {
+        Pause.SetActive(false);
+        Option.SetActive(true);
+
 
     }
     public void ReturnToCheckpoint()
