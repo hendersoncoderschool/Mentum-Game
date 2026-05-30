@@ -219,6 +219,7 @@ public class PlayerInput : MonoBehaviour
                     GameObject newExplosion = Instantiate(Explosion, Bomb.transform.position, Bomb.transform.rotation);
                     Destroy(Bomb.gameObject);
                     Destroy(newExplosion, 0.7f);
+                    audioSource.pitch = Random.Range(0.9f, 1.3f);
                     audioSource.PlayOneShot(sfx_explosion, 1);
 
 
