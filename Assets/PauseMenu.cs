@@ -4,23 +4,29 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PauseMenu : MonoBehaviour
 {
     RectTransform rectTransform;
     public bool Paused = false;
     [SerializeField] public GameObject Pause;
-    [SerializeField] public GameObject Option;
+    [SerializeField] public GameObject OptionMenu;
+    [SerializeField] public GameObject SoundMenu;
+    [SerializeField] public GameObject MusicSlider;
+    [SerializeField] public GameObject SFXSlider;
     public float TimeScale = 1f;
     public float Squish = 0f;
     public AudioMixer audioMixer;
     public PlayerInput Player;
-    public string OptionMenu = "Main";
+    public string Menu = "Main";
+    public Slider MusicVol;
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
+        MusicVol = MusicSlider.GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -32,7 +38,8 @@ public class PauseMenu : MonoBehaviour
             if (Paused == true)
             {
                 Pause.SetActive(true);
-                Option.SetActive(false);
+                OptionMenu.SetActive(false);
+                SoundMenu.SetActive(false);
             }
         }
         if (Paused == true)
@@ -47,7 +54,7 @@ public class PauseMenu : MonoBehaviour
                     {
                         Squish = 1;
                     }
-                }   
+                }
             }
         }
         else
@@ -66,7 +73,14 @@ public class PauseMenu : MonoBehaviour
             }
         }
         rectTransform.localScale = new Vector3(Squish, 1, 1);
-        audioMixer.SetFloat("MyExposedParam", 1 - Squish);
+        if (SoundMenu.active == true)
+        {
+            audioMixer.SetFloat("MusicEQ", 1);
+        }
+        else
+        {
+            audioMixer.SetFloat("MusicEQ", 1 - Squish);
+        }
     }
 
     public void Resume()
@@ -76,9 +90,8 @@ public class PauseMenu : MonoBehaviour
     public void Options()
     {
         Pause.SetActive(false);
-        Option.SetActive(true);
-
-
+        OptionMenu.SetActive(true);
+        SoundMenu.SetActive(false);
     }
     public void ReturnToCheckpoint()
     {
@@ -97,6 +110,28 @@ public class PauseMenu : MonoBehaviour
     {
 
     }
+    public void Sound()
+    {
+        Pause.SetActive(false);
+        OptionMenu.SetActive(false);
+        SoundMenu.SetActive(true);
 
+    }
+    public void BackToMainMenu()
+    {
+        Pause.SetActive(true);
+        OptionMenu.SetActive(false);
+        SoundMenu.SetActive(false);
+    }
+    public void BackToOptionMenu()
+    {
+        Pause.SetActive(false);
+        OptionMenu.SetActive(true);
+        SoundMenu.SetActive(false);
+    }
+    public void ChangeMusicVol()
+    {
+        audioMixer.SetFloat("MusicVol", MusicVol.value);
+    }
 
 }

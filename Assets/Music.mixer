@@ -36,8 +36,10 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: c7a6fcea2d56a1540a8a51d797d3cb18
+    name: MusicVol
   - guid: 88398fc3939623e4a9cf4299bf797249
-    name: MyExposedParam
+    name: MusicEQ
   m_AudioMixerGroupViews:
   - guids:
     - eb52ac5c16241c34d868a0c91262c2a0
