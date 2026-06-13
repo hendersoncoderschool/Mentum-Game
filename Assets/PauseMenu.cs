@@ -4,7 +4,8 @@ using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+//using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -132,6 +133,7 @@ public class PauseMenu : MonoBehaviour
     public void ChangeMusicVol()
     {
         audioMixer.SetFloat("MusicVol", MusicVol.value);
+
     }
 
 }
