@@ -2687,11 +2687,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db929f9f3c7be04cb1ae2957427f649, type: 3}
---- !u!1 &831451385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2498236504822987599, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-  m_PrefabInstance: {fileID: 1402321792}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876803477
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,18 +4584,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1707367237400797346, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 1519680690}
-    - target: {fileID: 1707367237400797346, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: MusicSlider
-      value: 
-      objectReference: {fileID: 831451385}
     - target: {fileID: 1716775936703162441, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: Music
       value: 
       objectReference: {fileID: 519420037}
+    - target: {fileID: 1865667415392234260, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 467f8b902e3103649807b39b8cb721ed, type: 3}
+    - target: {fileID: 2690273990598962006, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3197374188210281219, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4681,25 +4696,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4162182885392084871, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162182885392084871, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4162182885392084871, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6519611130651277770, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_Name
       value: Fade Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8879275474413290505, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8879275474413290505, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_AnchorMax.y
