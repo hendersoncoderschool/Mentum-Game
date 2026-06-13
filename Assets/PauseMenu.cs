@@ -132,7 +132,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void ChangeMusicVol()
     {
-        audioMixer.SetFloat("MusicVol", MusicVol.value);
+        if (MusicVol.value > 0.01)
+        {
+            audioMixer.SetFloat("MusicVol", Mathf.Log10(MusicVol.value) * 20f);
+        }
+        else
+        {
+            audioMixer.SetFloat("MusicVol", -80);
+        }
+
 
     }
 

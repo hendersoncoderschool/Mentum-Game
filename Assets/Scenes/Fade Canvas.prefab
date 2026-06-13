@@ -1555,12 +1555,14 @@ MonoBehaviour:
   Pause: {fileID: 7234903186961368140}
   OptionMenu: {fileID: 8184159861422677545}
   SoundMenu: {fileID: 2482889149474742286}
+  MusicSlider: {fileID: 2498236504822987599}
   SFXSlider: {fileID: 0}
   TimeScale: 1
   Squish: 0
   audioMixer: {fileID: 24100000, guid: 514b8571c0b70da488eeb42b5163fead, type: 2}
   Player: {fileID: 0}
   Menu: Main
+  MusicVol: {fileID: 0}
 --- !u!1 &6019656444346537041
 GameObject:
   m_ObjectHideFlags: 0
