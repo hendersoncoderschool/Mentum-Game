@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
         MusicVol = MusicSlider.GetComponent<Slider>();
-        SFXVol = MusicSlider.GetComponent<Slider>();
+        SFXVol = SFXSlider.GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -148,13 +148,14 @@ public class PauseMenu : MonoBehaviour
     }
     public void ChangeSFXVol()
     {
+        print("SFX CHANGE");
         if (MusicVol.value > 0.01)
         {
-            audioMixer.SetFloat("SFXVol", Mathf.Log10(MusicVol.value) * 20f);
+            SFXaudioMixer.SetFloat("SFXVol", Mathf.Log10(SFXVol.value) * 20f);
         }
         else
         {
-            audioMixer.SetFloat("SFXVol", -80);
+            SFXaudioMixer.SetFloat("SFXVol", -80);
         }
 
 
