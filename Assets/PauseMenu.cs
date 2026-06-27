@@ -19,15 +19,18 @@ public class PauseMenu : MonoBehaviour
     public float TimeScale = 1f;
     public float Squish = 0f;
     public AudioMixer audioMixer;
+    public AudioMixer SFXaudioMixer;
     public PlayerInput Player;
     public string Menu = "Main";
     public Slider MusicVol;
+    public Slider SFXVol;
     // Start is called before the first frame update
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
         Player = GameObject.FindWithTag("Player").GetComponent<PlayerInput>();
         MusicVol = MusicSlider.GetComponent<Slider>();
+        SFXVol = MusicSlider.GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -139,6 +142,19 @@ public class PauseMenu : MonoBehaviour
         else
         {
             audioMixer.SetFloat("MusicVol", -80);
+        }
+
+
+    }
+    public void ChangeSFXVol()
+    {
+        if (MusicVol.value > 0.01)
+        {
+            audioMixer.SetFloat("SFXVol", Mathf.Log10(MusicVol.value) * 20f);
+        }
+        else
+        {
+            audioMixer.SetFloat("SFXVol", -80);
         }
 
 

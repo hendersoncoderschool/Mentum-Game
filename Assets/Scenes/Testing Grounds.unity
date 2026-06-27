@@ -4585,7 +4585,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1554458733762197808, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
@@ -4612,6 +4620,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 467f8b902e3103649807b39b8cb721ed, type: 3}
+    - target: {fileID: 2690273990598962006, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2690273990598962006, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -4699,6 +4711,10 @@ PrefabInstance:
     - target: {fileID: 6519611130651277770, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_Name
       value: Fade Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8879275474413290505, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8879275474413290505, guid: 61dcb24345c20d1418b9cd9718ded4ec, type: 3}
       propertyPath: m_AnchorMax.y
