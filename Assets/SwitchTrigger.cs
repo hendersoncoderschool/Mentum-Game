@@ -18,12 +18,16 @@ public class SwitchTrigger : MonoBehaviour
     {
         if (GameManager.SwitchState == false)
         {
-            spriteRenderer.color = new Color(213, 0, 255);
+            Color Pink = new Color(213, 0, 255);
+            Pink.a = 1f;
+            spriteRenderer.color = Pink;
             print("Pink");
         }
         else
         {
-            spriteRenderer.color = new Color(0, 0, 255);
+            Color Purple = new Color(0, 0, 255);
+            Purple.a = 1f;
+            spriteRenderer.color = Purple;
             print("Purple");
         }
             
