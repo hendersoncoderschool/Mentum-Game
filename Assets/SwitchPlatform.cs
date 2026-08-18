@@ -31,7 +31,7 @@ public class SwitchPlatform : MonoBehaviour
         }
         else
         {
-            Platform.a = 0.2f;
+            Platform.a = 0.1f;
             spriteRenderer.color = Platform;
             polygonCollider.enabled = false;
         }

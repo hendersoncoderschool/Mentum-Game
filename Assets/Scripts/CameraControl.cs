@@ -80,7 +80,7 @@ public class CameraControl : MonoBehaviour
                 StartCoroutine(SmoothZoom());
             }
 
-            vCamera.m_Lens.OrthographicSize = (6 + Zoom + TopVel / 4);
+            vCamera.m_Lens.OrthographicSize = (10 + Zoom + TopVel / 4);
         }
             
     }
