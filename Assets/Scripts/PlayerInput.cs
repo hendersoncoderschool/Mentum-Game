@@ -196,9 +196,9 @@ public class PlayerInput : MonoBehaviour
                     velocityDirection += Bomb.transform.up / distance;
                     numColliders += 1;
 
-                    Debug.Log("Bomb: " + Bomb.transform.position.normalized);
+                    /*Debug.Log("Bomb: " + Bomb.transform.position.normalized);
                     Debug.Log("Position: " + transform.position.normalized);
-                    Debug.Log("Distance: " + distance);
+                    Debug.Log("Distance: " + distance);*/
 
                     Vector3 PlayerPos = transform.position;
                     Vector3 BombPos = Bomb.transform.position;
@@ -266,6 +266,7 @@ public class PlayerInput : MonoBehaviour
     {
         Dash = false;
         collisionPoint = (collision.GetContact(0).point);
+        //print("Touched Ground");
     }
     public void ChangeSpawnPoint(Vector3 NewSpawnPoint, int NewCheckpointPriority)
     {

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing Grounds.unity
     guid: 1918de8e0129f084ab83e78ed81993bf
+  - enabled: 1
+    path: Assets/Scenes/Garden.unity
+    guid: c168b08d5fd20bf48a2176b616de763a
+  - enabled: 1
+    path: Assets/Scenes/Sanctuary.unity
+    guid: f430c2ad70633744aa886d3471278e31
   m_configObjects: {}
