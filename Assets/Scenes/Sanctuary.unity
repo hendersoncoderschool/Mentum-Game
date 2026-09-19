@@ -2469,6 +2469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 264040673}
   - component: {fileID: 264040672}
+  - component: {fileID: 264040674}
   m_Layer: 0
   m_Name: Tower Struct R
   m_TagString: Untagged
@@ -2543,6 +2544,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 62.1}
+--- !u!114 &264040674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264040671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e5560312c54d4f909f273bff507ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  ParallaxNum: -0.1
+  ChangeX: 1
+  ChangeY: 1
 --- !u!4 &264117047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2793890081358640642, guid: 6db929f9f3c7be04cb1ae2957427f649, type: 3}
@@ -2989,7 +3006,7 @@ GameObject:
   - component: {fileID: 288754457}
   m_Layer: 0
   m_Name: CameraTarget
-  m_TagString: Untagged
+  m_TagString: CameraTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11284,6 +11301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296358794}
   - component: {fileID: 1296358793}
+  - component: {fileID: 1296358795}
   m_Layer: 0
   m_Name: Tower Struct L
   m_TagString: Untagged
@@ -11358,6 +11376,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -62.1}
+--- !u!114 &1296358795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296358792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131e5560312c54d4f909f273bff507ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+  ParallaxNum: -0.1
+  ChangeX: 1
+  ChangeY: 1
 --- !u!1 &1304157377
 GameObject:
   m_ObjectHideFlags: 0

@@ -419,6 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30226718}
   - component: {fileID: 30226717}
+  - component: {fileID: 30226719}
   m_Layer: 0
   m_Name: Waterfall Top
   m_TagString: Untagged
@@ -493,6 +494,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 199302235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &30226719
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30226716}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c134edbf67fc3154e96afe2c64a22dad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &37041893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6792,6 +6814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 577346721}
   - component: {fileID: 577346720}
+  - component: {fileID: 577346722}
   m_Layer: 0
   m_Name: Waterfall Repeat
   m_TagString: Untagged
@@ -6866,6 +6889,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 199302235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &577346722
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577346719}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b945f80a4573ce4d9a0e5155f1ce8a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &578909060
 GameObject:
   m_ObjectHideFlags: 0
