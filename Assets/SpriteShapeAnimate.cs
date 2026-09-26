@@ -4,9 +4,9 @@ using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.U2D;
 
-public class GrassAnimate : MonoBehaviour
+public class SpriteShapeAnimate : MonoBehaviour
 {
-    [SerializeField] public SpriteShape Grass0, Grass1, Grass2, Grass3;
+    [SerializeField] public SpriteShape[]Shapes;
     public SpriteShapeController Controller;
     public float AnimSpeed;
     public float AnimFrame;
@@ -20,9 +20,10 @@ public class GrassAnimate : MonoBehaviour
     void Update()
     {
         AnimFrame += Time.deltaTime * AnimSpeed;
-        AnimFrame = AnimFrame % 4;
+        AnimFrame = AnimFrame % Shapes.Length;
+        Controller.spriteShape = Shapes[Mathf.FloorToInt(AnimFrame)];
 
-        /&if (AnimFrame < 1)
+        /*if (AnimFrame < 1)
         {
             Controller.spriteShape = Grass0;
         }
@@ -44,6 +45,6 @@ public class GrassAnimate : MonoBehaviour
                     Controller.spriteShape = Grass3;
                 }
             }
-        }
+        }*/
     }
 }
