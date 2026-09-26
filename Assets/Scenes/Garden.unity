@@ -8831,7 +8831,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-  m_SpriteShape: {fileID: 11400000, guid: e1a7f9d3dd3b2b447a728fab77911cd5, type: 2}
+  m_SpriteShape: {fileID: 11400000, guid: 46ab8c2298b90384f9ea3fd8ad169eff, type: 2}
   m_FillPixelPerUnit: 16
   m_StretchTiling: 64
   m_SplineDetail: 16
@@ -8989,7 +8989,7 @@ SpriteShapeRenderer:
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 2800000, guid: e21d1b22e784e26488c74782e5617845, type: 3}
   m_Sprites:
-  - {fileID: 1986718825, guid: f39cb534737509540a3246c3bb80643c, type: 3}
+  - {fileID: -497248663, guid: f39cb534737509540a3246c3bb80643c, type: 3}
   m_LocalAABB:
     m_Center: {x: 3.5905485, y: -22.094608, z: 0}
     m_Extent: {x: 18.548023, y: 25.823597, z: 0}
@@ -9021,6 +9021,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c0e9eee82d936418310cc39f4d7c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grass0: {fileID: 11400000, guid: 46ab8c2298b90384f9ea3fd8ad169eff, type: 2}
+  Grass1: {fileID: 11400000, guid: e1a7f9d3dd3b2b447a728fab77911cd5, type: 2}
+  Grass2: {fileID: 11400000, guid: a8008060f04c38044850f73d391771e8, type: 2}
+  Grass3: {fileID: 11400000, guid: 4b877609023350d42931e735a5377a45, type: 2}
+  Controller: {fileID: 0}
+  AnimSpeed: 3
+  AnimFrame: 0
 --- !u!4 &707402129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5538671873591324383, guid: cf832ebc75ac12a439832453ae324877, type: 3}
