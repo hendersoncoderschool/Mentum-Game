@@ -488,7 +488,7 @@ Transform:
   m_GameObject: {fileID: 30226716}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.195084, y: -1.0699692, z: 0}
+  m_LocalPosition: {x: 0, y: -1.0699692, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
-    - position: {x: 17.51, y: 3.9299998, z: 0}
+    - position: {x: -12, y: 3.9299998, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2457,7 +2457,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 41.51, y: 3.9299998, z: 0}
+    - position: {x: 12, y: 3.9299998, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2465,7 +2465,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 41.51, y: -26.07, z: 0}
+    - position: {x: 12, y: -26.07, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2473,7 +2473,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 17.51, y: -26.07, z: 0}
+    - position: {x: -12, y: -26.07, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -2636,8 +2636,8 @@ SpriteShapeRenderer:
   m_Sprites:
   - {fileID: 21300000, guid: 0713c84e74347e94aad6526225f98683, type: 3}
   m_LocalAABB:
-    m_Center: {x: 29.510002, y: -11.070002, z: 0}
-    m_Extent: {x: 12.354713, y: 15.354712, z: 0}
+    m_Center: {x: 0, y: -11.070002, z: 0}
+    m_Extent: {x: 12.35471, y: 15.354712, z: 0}
   m_SpriteSortPoint: 0
 --- !u!4 &199302235
 Transform:
@@ -2648,7 +2648,7 @@ Transform:
   m_GameObject: {fileID: 199302232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5699997, y: 1.0699997, z: 0}
+  m_LocalPosition: {x: 29.18, y: 1.0699997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6883,7 +6883,7 @@ Transform:
   m_GameObject: {fileID: 577346719}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.195084, y: -14.958698, z: 0}
+  m_LocalPosition: {x: 0, y: -14.958698, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9027,7 +9027,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a8008060f04c38044850f73d391771e8, type: 2}
   - {fileID: 11400000, guid: 4b877609023350d42931e735a5377a45, type: 2}
   Controller: {fileID: 0}
-  AnimSpeed: 3
+  AnimSpeed: 5
   AnimFrame: 0
 --- !u!4 &707402129 stripped
 Transform:
@@ -16388,6 +16388,7 @@ GameObject:
   - component: {fileID: 1368210682}
   - component: {fileID: 1368210681}
   - component: {fileID: 1368210680}
+  - component: {fileID: 1368210684}
   m_Layer: 7
   m_Name: PlatStart (3)
   m_TagString: Untagged
@@ -16838,6 +16839,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1376488873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368210684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368210679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c0e9eee82d936418310cc39f4d7c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shapes:
+  - {fileID: 11400000, guid: 46ab8c2298b90384f9ea3fd8ad169eff, type: 2}
+  - {fileID: 11400000, guid: e1a7f9d3dd3b2b447a728fab77911cd5, type: 2}
+  - {fileID: 11400000, guid: a8008060f04c38044850f73d391771e8, type: 2}
+  - {fileID: 11400000, guid: 4b877609023350d42931e735a5377a45, type: 2}
+  Controller: {fileID: 0}
+  AnimSpeed: 5
+  AnimFrame: 0
 --- !u!1 &1376420108
 GameObject:
   m_ObjectHideFlags: 0
@@ -19657,6 +19678,7 @@ GameObject:
   - component: {fileID: 1589404395}
   - component: {fileID: 1589404394}
   - component: {fileID: 1589404393}
+  - component: {fileID: 1589404396}
   m_Layer: 7
   m_Name: PlatStart (4)
   m_TagString: Untagged
@@ -19857,6 +19879,26 @@ SpriteShapeRenderer:
     m_Center: {x: 72.5, y: -15.45367, z: 0}
     m_Extent: {x: 83.73193, y: 15.796332, z: 0}
   m_SpriteSortPoint: 0
+--- !u!114 &1589404396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589404391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c0e9eee82d936418310cc39f4d7c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shapes:
+  - {fileID: 11400000, guid: 46ab8c2298b90384f9ea3fd8ad169eff, type: 2}
+  - {fileID: 11400000, guid: e1a7f9d3dd3b2b447a728fab77911cd5, type: 2}
+  - {fileID: 11400000, guid: a8008060f04c38044850f73d391771e8, type: 2}
+  - {fileID: 11400000, guid: 4b877609023350d42931e735a5377a45, type: 2}
+  Controller: {fileID: 0}
+  AnimSpeed: 5
+  AnimFrame: 0
 --- !u!4 &1591156944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5538671873591324383, guid: cf832ebc75ac12a439832453ae324877, type: 3}
