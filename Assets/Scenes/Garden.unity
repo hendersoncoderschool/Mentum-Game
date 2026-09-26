@@ -8095,6 +8095,7 @@ GameObject:
   - component: {fileID: 669273905}
   - component: {fileID: 669273904}
   - component: {fileID: 669273903}
+  - component: {fileID: 669273907}
   m_Layer: 7
   m_Name: PlatStart (2)
   m_TagString: Untagged
@@ -8295,6 +8296,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1376488873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669273907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669273902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c0e9eee82d936418310cc39f4d7c56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shapes:
+  - {fileID: 11400000, guid: 46ab8c2298b90384f9ea3fd8ad169eff, type: 2}
+  - {fileID: 11400000, guid: e1a7f9d3dd3b2b447a728fab77911cd5, type: 2}
+  - {fileID: 11400000, guid: a8008060f04c38044850f73d391771e8, type: 2}
+  - {fileID: 11400000, guid: 4b877609023350d42931e735a5377a45, type: 2}
+  Controller: {fileID: 0}
+  AnimSpeed: 5
+  AnimFrame: 0
 --- !u!1001 &672455629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10583,7 +10604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &814065848
 SpriteRenderer:
   m_ObjectHideFlags: 0
