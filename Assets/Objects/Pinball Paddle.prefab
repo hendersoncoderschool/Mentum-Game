@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2163513980455501010}
   - component: {fileID: 6400969617357304309}
   - component: {fileID: 3869344298624600882}
+  - component: {fileID: 3812718750532650525}
   m_Layer: 0
   m_Name: Pinball Paddle
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7a08cab66039035499f1020868ae1aea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -117,10 +118,10 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.5, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.18, y: 0.5}
     oldSize: {x: 4.6875, y: 1.5625}
     newSize: {x: 0.75, y: 0.25}
     adaptiveTilingThreshold: 0.5
@@ -136,7 +137,24 @@ PolygonCollider2D:
       - {x: -2.2252617, y: -0.28322983}
       - {x: -2.0748215, y: -0.5351944}
       - {x: -1.5020523, y: -0.75759125}
+      - {x: 1.9900239, y: -0.24398804}
       - {x: 2.2311096, y: -0.20853043}
       - {x: 2.339634, y: -0.0011444092}
       - {x: 2.2242928, y: 0.24148178}
   m_UseDelaunayMesh: 0
+--- !u!114 &3812718750532650525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093770985003977488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc558b44cc6fb0408256cf1b984e295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TravelTime: 0
+  ChangeRotation: 0
+  RestingRotation: 0
+  ControlKey: 
