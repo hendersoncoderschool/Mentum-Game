@@ -7589,6 +7589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pinball Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 6279166708539243926, guid: 6e6bd84ff10b42c49943adce7ecf101e, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 10.466999
+      objectReference: {fileID: 0}
     - target: {fileID: 6400969617357304309, guid: 6e6bd84ff10b42c49943adce7ecf101e, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -13476,6 +13480,14 @@ PrefabInstance:
     - target: {fileID: 4093770985003977488, guid: 6e6bd84ff10b42c49943adce7ecf101e, type: 3}
       propertyPath: m_Name
       value: Pinball Paddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279166708539243926, guid: 6e6bd84ff10b42c49943adce7ecf101e, type: 3}
+      propertyPath: m_UseMotor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279166708539243926, guid: 6e6bd84ff10b42c49943adce7ecf101e, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
