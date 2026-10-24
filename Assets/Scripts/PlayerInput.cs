@@ -28,6 +28,9 @@ public class PlayerInput : MonoBehaviour
     public AudioClip sfx_explosion;
     AudioSource audioSource;
 
+    public int PlayerMaxMoChanges;
+    public int PlayerMoChanges;
+
 
 
     // Start is called before the first frame update
@@ -37,6 +40,7 @@ public class PlayerInput : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         //mouseWorldPos.z = -10f;
+        PlayerMoChanges = PlayerMaxMoChanges;
     }
 
 
@@ -96,8 +100,11 @@ public class PlayerInput : MonoBehaviour
 
         // Right Click - Velocity Change
 
-        if (Input.GetMouseButtonUp(1) && CanControl)
+        if (Input.GetMouseButtonUp(1) && CanControl && PlayerMoChanges > 0)
         {
+            //Remove MoChange
+            PlayerMoChanges -= 1;
+
             // Get mouse position
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -267,6 +274,7 @@ public class PlayerInput : MonoBehaviour
         Dash = false;
         collisionPoint = (collision.GetContact(0).point);
         //print("Touched Ground");
+        PlayerMoChanges = PlayerMaxMoChanges;
     }
     public void ChangeSpawnPoint(Vector3 NewSpawnPoint, int NewCheckpointPriority)
     {
