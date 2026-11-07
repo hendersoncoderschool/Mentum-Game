@@ -9,10 +9,13 @@ public class Paddle : MonoBehaviour
     public float ChangeRotation;
     private float RestingRotation;
     public string ControlKey;
+    public bool IsPressed;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
         RestingRotation = transform.eulerAngles.z;
+        Player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -26,10 +29,24 @@ public class Paddle : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, RestingRotation + ChangeRotation);
 
             print("I am peing pressed down!");
+            IsPressed = true;
         }
         else
         {
             transform.eulerAngles = new Vector3(0, 0, RestingRotation);
+            IsPressed= false;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (IsPressed)
+            {
+                Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
+                Vector2 dir = (collision.transform.position - transform.position).normalized;
+                playerRb.velocity = (dir + Vector2.up);
+            }   
         }
     }
 }
