@@ -3269,6 +3269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8370157396960470998, guid: d74190460f150814d83d5609c08887e5, type: 3}
+      propertyPath: m_Mass
+      value: 0.7853982
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11473,12 +11477,32 @@ PrefabInstance:
       value: x
       objectReference: {fileID: 0}
     - target: {fileID: 3812718750532650525, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: TravelSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812718750532650525, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
       propertyPath: ChangeRotation
-      value: 40
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4093770985003977488, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
       propertyPath: m_Name
       value: PaddleTest (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 10.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_Motor.m_MaximumMotorForce
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22490,9 +22514,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 3812718750532650525, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: TravelSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3812718750532650525, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: ChangeRotation
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 4093770985003977488, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
       propertyPath: m_Name
       value: PaddleTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158755052119669667, guid: 8338c08e9f0055646a2113001a1004a4, type: 3}
+      propertyPath: m_Motor.m_MaximumMotorForce
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
