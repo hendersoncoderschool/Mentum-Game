@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6400969617357304309}
   - component: {fileID: 3869344298624600882}
   - component: {fileID: 3812718750532650525}
+  - component: {fileID: 1265804923607747154}
+  - component: {fileID: 5158755052119669667}
   m_Layer: 0
   m_Name: PaddleTest
   m_TagString: Untagged
@@ -154,7 +156,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc558b44cc6fb0408256cf1b984e295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TravelTime: 0.5
-  ChangeRotation: 40
+  TravelSpeed: 2000
+  ChangeRotation: -40
   ControlKey: z
-  IsPressed: 0
+  Player: {fileID: 0}
+--- !u!50 &1265804923607747154
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093770985003977488}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!233 &5158755052119669667
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4093770985003977488}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.3, y: -11.26}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 1
+  m_AngleLimits:
+    m_LowerAngle: 360
+    m_UpperAngle: 360

@@ -5,48 +5,37 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    public float TravelTime;
+    public float TravelSpeed;
     public float ChangeRotation;
+    private float ActiveRotation;
     private float RestingRotation;
     public string ControlKey;
-    public bool IsPressed;
     public GameObject Player;
+    float targetAngle;
+    Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
         RestingRotation = transform.eulerAngles.z;
         Player = GameObject.FindWithTag("Player");
+        ActiveRotation = RestingRotation - ChangeRotation;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //NEED TO CHANGE HOW THIS IS BEING DONE. Likely need to use Rigidbody 2D.
-        //Need to change, because although the rotation is going where it should, the player is not being launched, it is simply being pushed out of the object
-        //Need to transfer force to the player
         if (Input.GetKey(ControlKey))
         {
-            transform.eulerAngles = new Vector3(0, 0, RestingRotation + ChangeRotation);
-
-            print("I am peing pressed down!");
-            IsPressed = true;
+            targetAngle = ActiveRotation;
+            Debug.Log("PRESSED");
         }
         else
         {
-            transform.eulerAngles = new Vector3(0, 0, RestingRotation);
-            IsPressed= false;
+            targetAngle = RestingRotation;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            if (IsPressed)
-            {
-                Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
-                Vector2 dir = (collision.transform.position - transform.position).normalized;
-                playerRb.velocity = (dir + Vector2.up);
-            }   
-        }
+        float currentAngle = rb.rotation;
+        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, TravelSpeed * Time.deltaTime);
+        rb.MoveRotation(newAngle);
     }
 }
